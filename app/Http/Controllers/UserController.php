@@ -19,4 +19,14 @@ class UserController extends Controller
     {
         return view('detailtransaksi',compact('produk'));
     }
+
+    public function login()
+    {
+        return view('login');
+    }
+
+    public function daftar()
+    {
+        return view('daftar');
+    }
 }

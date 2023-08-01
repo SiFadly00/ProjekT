@@ -26,6 +26,12 @@ class DatabaseSeeder extends Seeder
             'harga' => '30000000',
             'foto' => 'img/rog.jpg'
         ]);
+        produk::create([
+            'nama' => 'NOKIA',
+            'kategori_id' => '1',
+            'harga' => '20000000',
+            'foto' => 'img/NOKIA.jpg'
+        ]);
         user::create([
             'nama' => 'Fadly',
             'email' => 'lapulapu@gmail.com',
