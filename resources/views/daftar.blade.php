@@ -14,10 +14,10 @@
         <h1 class="text-center">Daftar</h1><hr>
         <div class="card col-6 mx-auto shadow-lg">
             <div class="card-body">
-                <form action="" class="form-group" method="POST">
+                <form action="{{ route('postdaftar') }}" class="form-group" method="POST">
                     @csrf
                     <label for="">Nama</label>
-                    <input type="text" name="username" required class="form-control">
+                    <input type="text" name="nama" required class="form-control">
                     <label for="">Email</label>
                     <input type="Email" name="email" required class="form-control">
                     <label for="">Password</label>

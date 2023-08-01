@@ -17,10 +17,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'UserController@home')->name('home');
 
 Route::get('/login', 'UserController@login')->name('login');
+
 Route::get('/daftar', 'UserController@daftar')->name('daftar');
 
+Route::POST('/postdaftar', 'UserController@postdaftar')->name('postdaftar');
+
 Route::middleware('auth')->group(function(){
-    Route::get('/detailtransaksi{produk}', 'UserController@detailtransaksi')->name('detailtransaksi');
+
+Route::get('/detailtransaksi{produk}', 'UserController@detailtransaksi')->name('detailtransaksi');
+
 } );
 
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\produk;
+use App\Models\user;
 use App\Models\detailtransaksi;
 use Illuminate\Http\Request;
 
@@ -28,5 +29,23 @@ class UserController extends Controller
     public function daftar()
     {
         return view('daftar');
+    }
+
+    public function postdaftar(Request $request)
+    {
+        $request->validate([
+            'email' => 'required',
+            'password' => 'required',
+            'nama' => 'required'
+        ]);
+
+        user::create([
+            'email' => $request->email,
+            'password' => $request->password,
+            'nama' => $request->nama,
+            'role' => 'user'
+        ]);
+        
+        return redirect()->route('login')->with('Data User Berhasil Di simpan');
     }
 }
