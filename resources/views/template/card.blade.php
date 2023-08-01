@@ -9,8 +9,7 @@
                     <img src="{{ asset($item->foto) }}" width="fill" alt="fotonya hilang :v" class="card-img-top">
                     <p class="card-detail">nama produk {{ $item->nama }}</p>
                     <p class="card-detail">harga produk {{ $item->harga }}</p>
-                    <a href="" class="btn btn-primary w-100">ingfo barang</a> 
-                    {{-- {{ route('detail', $item->id) }}    --}}
+                    <a href="{{ route('detailtransaksi', $item->id) }}" class="btn btn-primary w-100">ingfo barang</a>  
                     </div>
                 </div>
             </div>

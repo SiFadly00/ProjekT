@@ -15,4 +15,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'UserController@home')->name('home');
+Route::get('/detailtransaksi{produk}', 'UserController@detailtransaksi')->name('detailtransaksi');
+
 
