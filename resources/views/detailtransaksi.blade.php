@@ -19,7 +19,7 @@
             <div class="col">
                 <div class="card-shadow" style="background-color: rgba(98, 136, 159)">
                     <div class="card-body">
-                        <img src="{{ asset($produk->foto) }}" width="fill" alt="{{ $produk->name }}"
+                        <img width="426" height="240" src="{{ asset($produk->foto) }}" width="fill" alt="{{ $produk->name }}"
                             class="card-img-top">
                     </div>
                 </div>
@@ -27,8 +27,8 @@
             <div class="col">
                 <div class="card shadow" style="background-color: rgba(98, 136, 159)">
                     <div class="card-body">
-                        <p class="card-detail">nama produk {{ $produk->nama }}</p>
-                        <p class="card-detail">harga produk {{ $produk->harga }}</p>
+                        <p class="card-detail">nama produk : {{ $produk->nama }}</p>
+                        <p class="card-detail">harga produk Rp: {{ $produk->harga }}</p>
                         <a href="" class="btn btn-primary w-100">beli</a>
                         {{-- {{ route('detail', $item->id) }}    --}}
                     </div>

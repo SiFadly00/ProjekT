@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <title>mencoba</title>
+    <title>Daftar</title>
 </head>
 <body>
     @include('template.nav')
@@ -16,12 +16,12 @@
             <div class="card-body">
                 <form action="" class="form-group" method="POST">
                     @csrf
-                    <label for="">Username</label>
-                    <input type="text" name="username" class="form-control">
-                    <label for="">Password</label>
-                    <input type="Password" name="password" class="form-control">
+                    <label for="">Nama</label>
+                    <input type="text" name="username" required class="form-control">
                     <label for="">Email</label>
-                    <input type="Email" name="email" class="form-control">
+                    <input type="Email" name="email" required class="form-control">
+                    <label for="">Password</label>
+                    <input type="Password" name="password" required class="form-control">
                     <button class="btn btn-dark form-control mt-2">Buat Akun</button>
                 </form>
             </div>

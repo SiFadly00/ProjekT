@@ -6,9 +6,9 @@
             <div class="col-3">
                 <div class="card shadow" style="background-color: rgba(98, 136, 159)">
                     <div class="card-body">
-                        <img src="{{ asset($item->foto) }}" alt="fotonya hilang :v" class="card-img-top">
-                        <p class="card-detail">nama produk {{ $item->nama }}</p>
-                        <p class="card-detail">harga produk {{ $item->harga }}</p>
+                        <img width="426" height="240" src="{{ asset($item->foto) }}" alt="fotonya hilang :v" class="card-img-top">
+                        <p class="card-detail">nama produk : {{ $item->nama }}</p>
+                        <p class="card-detail">harga produk Rp: {{ $item->harga }}</p>
                         <a href="{{ route('detailtransaksi', $item->id) }}" class="btn btn-primary w-100">ingfo barang</a>
                     </div>
                 </div>

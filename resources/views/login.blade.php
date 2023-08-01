@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <title>mencoba</title>
+    <title>Login</title>
 </head>
 <body>
     @include('template.nav')
@@ -17,9 +17,9 @@
                 <form action="" class="form-group" method="POST">
                     @csrf
                     <label for="">Username</label>
-                    <input type="text" name="username" class="form-control">
+                    <input type="text" name="username" required class="form-control">
                     <label for="">Password</label>
-                    <input type="Password" name="password" class="form-control">
+                    <input type="Password" name="password" required class="form-control">
                     <button class="btn btn-dark form-control mt-2">Login</button>
                     <p class="text-center">Belum Punya Akun?</p>
                     <a href="{{ route('daftar') }}">Daftar Sekarang!</a>

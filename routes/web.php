@@ -15,8 +15,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'UserController@home')->name('home');
-Route::get('/detailtransaksi{produk}', 'UserController@detailtransaksi')->name('detailtransaksi');
+
 Route::get('/login', 'UserController@login')->name('login');
 Route::get('/daftar', 'UserController@daftar')->name('daftar');
+
+Route::middleware('auth')->group(function(){
+    Route::get('/detailtransaksi{produk}', 'UserController@detailtransaksi')->name('detailtransaksi');
+} );
 
 
